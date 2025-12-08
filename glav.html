@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/glavstyle.css">
+    <title>Secure Messaging</title>
+</head>
+<body>
+    <!-- Мобильная навигация -->
+    <header class="mobile-header">
+        <div class="mobile-header-top">
+            <div class="mobile-logo">
+                <i class="fas fa-film mobile-logo-icon"></i>
+                <span>FUTUREKINO</span>
+            </div>
+            
+            <button class="mobile-menu-toggle touch-target" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="#" class="active">Расписание</a></li>
+                <li><a href="#">Фильмы</a></li>
+                <li><a href="#">Кинотеатры</a></li>
+                <li><a href="#">Кинокарта</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+            
+            <a href="#" class="mobile-login-btn touch-target">
+                <i class="fas fa-user"></i> Войти
+            </a>
+        </nav>
+    </header>
+    
+    <!-- Десктопная навигация (скрыта на мобильных) -->
+    <header class="desktop-header hidden">
+        <div class="container">
+            <div class="desktop-logo">
+                <i class="fas fa-film desktop-logo-icon"></i>
+                <span>FUTUREKINO</span>
+            </div>
+            
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#" class="active">Расписание</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Кинотеатры</a></li>
+                    <li><a href="#">Кинокарта</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </nav>
+            
+            <button class="desktop-login-btn">
+                <i class="fas fa-user"></i> Войти
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный баннер -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1 class="movie-title">Аватар: Путь воды</h1>
+                    
+                    <div class="movie-info">
+                        <span class="rating">✰ 8.7</span>
+                        <span class="genre">Фантастика, Приключения</span>
+                        <span class="duration">2ч 18м</span>
+                    </div>
+                    
+                    <p class="movie-description">
+                        Погрузитесь в захватывающую вселенную Пандоры, где герои отправляются в новое опасное путешествие по неизведанным водам далекой планеты.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#" class="btn trailer-btn touch-target">
+                            <i class="fas fa-play-circle"></i> Смотреть трейлер
+                        </a>
+                        <a href="#" class="btn ticket-btn touch-target">
+                            <i class="fas fa-ticket-alt"></i> Купить билет
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Скоро в прокате" -->
+        <section class="coming-soon">
+            <div class="section-header">
+                <h2 class="section-title">Скоро в прокате</h2>
+                <a href="#" class="all-premieres">
+                    Все премьеры <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="movies-slider">
+                <!-- Фильм 1 -->
+                <div class="movie-card fade-in">
+                    <img src="assets/chebu.png" alt="Чебурашка 2" class="movie-poster">
+                    <div class="movie-card-content">
+                        <h3 class="movie-card-title">Чебурашка 2</h3>
+                        <p class="movie-card-genre">Семейный</p>
+                        <p class="movie-card-date">В кино с 1 января 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Фильм 2 -->
+                <div class="movie-card fade-in">
+                    <img src="assets/fredi.png" alt="Пять ночей с Фредди 2" class="movie-poster">
+                    <div class="movie-card-content">
+                        <h3 class="movie-card-title">Пять ночей с Фредди 2</h3>
+                        <p class="movie-card-genre">Ужасы</p>
+                        <p class="movie-card-date">5 декабря 2025</p>
+                    </div>
+                </div>
+                
+                <!-- Фильм 3 -->
+                <div class="movie-card fade-in">
+                    <img src="assets/buratino.png" alt="Буратино" class="movie-poster">
+                    <div class="movie-card-content">
+                        <h3 class="movie-card-title">Буратино</h3>
+                        <p class="movie-card-genre">Приключения</p>
+                        <p class="movie-card-date">1 января 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Почему выбирают нас" -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title text-center mb-20">Почему выбирают нас?</h2>
+                
+                <div class="features-grid">
+                    <!-- Особенность 1 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <h3 class="feature-title">Dolby Atmos</h3>
+                        <p class="feature-desc">Иммерсивный звук с системой объемного звучания для полного погружения в фильм.</p>
+                    </div>
+                    
+                    <!-- Особенность 2 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-chair"></i>
+                        </div>
+                        <h3 class="feature-title">Удобные кресла</h3>
+                        <p class="feature-desc">Кожаные кресла с подогревом и электрорегулировкой для максимального комфорта.</p>
+                    </div>
+                    
+                    <!-- Особенность 3 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                        <h3 class="feature-title">Бесплатная парковка</h3>
+                        <p class="feature-desc">Просторная парковка рядом с кинотеатром для вашего удобства.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Быстрый выбор сеанса -->
+        <section class="quick-booking fade-in">
+            <h2 class="quick-booking-title">Быстрый выбор сеанса</h2>
+            
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="cinema">Кинотеатр</label>
+                    <div class="select-wrapper">
+                        <select id="cinema">
+                            <option value="">Выберите кинотеатр</option>
+                            <option value="top">Top Cinema</option>
+                            <option value="kinoklax">Kinoklax</option>
+                            <option value="kinomax">Киномакс-IMAX</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="movie">Фильм</label>
+                    <div class="select-wrapper">
+                        <select id="movie">
+                            <option value="">Выберите фильм</option>
+                            <option value="avatar">Аватар: Путь воды</option>
+                            <option value="cheburashka">Чебурашка 2</option>
+                            <option value="freddy">Пять ночей с Фредди 2</option>
+                            <option value="buratino">Буратино</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Дата</label>
+                    <input type="date" id="date">
+                </div>
+                
+                <button type="submit" class="find-btn touch-target">
+                    <i class="fas fa-search"></i> Найти сеансы
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- О компании -->
+                <div class="footer-section fade-in">
+                    <h3>FUTUREKINO</h3>
+                    <p>Лучший кинотеатр вашего города с новейшими технологиями и комфортными залами.</p>
+                    <div class="contact-info">
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (999) 123-45-67</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cinemax.ru</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Казань, ул. Кинотеатральная, 32</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Меню -->
+                <div class="footer-section fade-in">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> Расписание</a></li>
+                        <li><a href="#"><i class="fas fa-film"></i> Фильмы</a></li>
+                        <li><a href="#"><i class="fas fa-building"></i> Кинотеатры</a></li>
+                        <li><a href="#"><i class="fas fa-percentage"></i> Акции</a></li>
+                        <li><a href="#"><i class="fas fa-address-card"></i> Кинокарта</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Кинотеатры -->
+                <div class="footer-section fade-in">
+                    <h3>Кинотеатры</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-star"></i> Top Cinema</a></li>
+                        <li><a href="#"><i class="fas fa-volume-up"></i> Kinoklax</a></li>
+                        <li><a href="#"><i class="fas fa-maximize"></i> Киномакс-IMAX</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2024 CINEMAX. Все права защищены
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+                menuToggle.innerHTML = mobileNav.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Закрытие меню при клике на ссылку
+            const navLinks = document.querySelectorAll('.mobile-nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+        
+            
+            // Показываем десктопную версию на больших экранах
+            function checkScreenSize() {
+                const mobileHeader = document.querySelector('.mobile-header');
+                const desktopHeader = document.querySelector('.desktop-header');
+                
+                if (window.innerWidth >= 768) {
+                    mobileHeader.classList.add('hidden');
+                    desktopHeader.classList.remove('hidden');
+                } else {
+                    mobileHeader.classList.remove('hidden');
+                    desktopHeader.classList.add('hidden');
+                    // Закрываем мобильное меню при переходе на десктоп
+                    mobileNav.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+            
+            // Проверяем при загрузке и изменении размера окна
+            checkScreenSize();
+            window.addEventListener('resize', checkScreenSize);
+            
+        });
+    </script>
+</body>

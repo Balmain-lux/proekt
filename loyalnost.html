@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/loyalnoststyle.css">
+    <title>Secure Messaging</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-film"></i> FUTUREKINO
+                </a>
+                <div class="nav-links">
+                    <a href="#">Расписание</a>
+                    <a href="#">Фильмы</a>
+                    <a href="#">Кинотеатры</a>
+                    <a href="#">Акции</a>
+                    <a href="#" style="color: var(--accent);">Кинокарта</a>
+                </div>
+                <button class="auth-btn">Войти</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="#">Главная</a>
+            <span>></span>
+            <span>Кинокарта</span>
+        </div>
+    </div>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Программа лояльности "Кинокарта"</h1>
+            <p>Получайте бонусы за покупки и повышайте свой статус для получения дополнительных привилегий!</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content container">
+        <!-- Cards section -->
+        <section class="cards-section">
+            <h2 class="section-title">Выберите свою карту</h2>
+            <div class="cards-container">
+                <!-- Стандартная карта -->
+                <div class="card-type standard">
+                    <div class="card-header">
+                        <h3>Стандарт</h3>
+                        <div class="price">Бесплатно при регистрации</div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>5% скидка на все билеты</li>
+                            <li>1 балл за каждые 100Р</li>
+                            <li>Приветственный подарок</li>
+                        </ul>
+                        <a href="#" class="card-btn">Получить карту</a>
+                    </div>
+                </div>
+                
+                <!-- Премиум карта -->
+                <div class="card-type premium">
+                    <div class="card-header">
+                        <h3>Премиум</h3>
+                        <div class="price">2500 баллов для активации</div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>10% скидка на все билеты</li>
+                            <li>2 балла за каждые 100Р</li>
+                            <li>Персональные предложения</li>
+                            <li>Бесплатный попкорн в день рождения</li>
+                            <li>Приоритетная бронь мест</li>
+                        </ul>
+                        <a href="#" class="card-btn">Получить карту</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Points section -->
+        <section class="points-section">
+            <h2 class="section-title">Как получить карту?</h2>
+            <div class="points-container">
+                <div class="points-table">
+                    <h3>Начисление баллов</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Действие</th>
+                                <th>Баллы</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1 билет</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>1 попкорн</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>1 напиток</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>Посещение в день рождения</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Приглашение друга</td>
+                                <td>150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 20px; color: var(--text-light); font-size: 14px;">
+                        * Баллы начисляются на следующий день после покупки
+                    </p>
+                </div>
+                
+                <div class="points-bonuses">
+                    <h3>Ваши бонусы</h3>
+                    <div class="bonus-item">
+                        <div class="bonus-label">Накоплено:</div>
+                        <div class="bonus-value">1 250 баллов</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-label">Доступно для списания:</div>
+                        <div class="bonus-value">625P</div>
+                    </div>
+                    <div class="bonus-item">
+                        <div class="bonus-label">До следующего уровня:</div>
+                        <div class="bonus-value">250 баллов</div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+                    <p style="margin-top: 10px; text-align: center; color: var(--text-light);">
+                        Прогресс до карты Премиум: 1250/2500
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FUTUREKINO</h3>
+                    <p style="color: #ccc;">Лучший кинотеатр вашего города с новейшими технологиями и комфортными залами.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">Фильмы</a></li>
+                        <li><a href="#">Кинотеатры</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Кинокарта</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Кинотеатры</h3>
+                    <ul>
+                        <li><a href="#">Top Cinema</a></li>
+                        <li><a href="#">KinoMax</a></li>
+                        <li><a href="#">Киномакс-IMAX</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                        <p><i class="fas fa-envelope"></i> info@cinemax.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Казань, ул. Кинотеатральная, 32</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 CINEMAX. Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+</body>

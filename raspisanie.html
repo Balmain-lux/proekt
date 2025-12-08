@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/raspisaniestyle.css">
+    <title>Secure Messaging</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-film"></i>
+            FUTUREKINO
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Расписание</a></li>
+                <li><a href="#">Фильмы</a></li>
+                <li><a href="#">Кинотеатры</a></li>
+                <li><a href="#">Кинокарта</a></li>
+                <li><a href="#">Акции</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="#" class="btn btn-login">Войти</a>
+                <a href="#" class="btn btn-primary">Купить билет</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Schedule Filters -->
+    <section class="schedule-filters">
+        <h1>Расписание сеансов</h1>
+        <div class="filter-group">
+            <label for="cinema">Все кинотеатры</label>
+            <select id="cinema">
+                <option>Все кинотеатры</option>
+                <option>CINEA Plaza</option>
+                <option>CINEMAX Arena</option>
+                <option>CINEMAX Galaxy</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="date">Сегодня 17</label>
+            <input type="date" id="date" class="date-input" value="2023-12-08">
+        </div>
+        
+        <div class="filter-group">
+            <label for="format">Все форматы</label>
+            <select id="format">
+                <option>Все форматы</option>
+                <option>2D</option>
+                <option>3D</option>
+                <option>IMAX</option>
+                <option>4DX</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="time">Любое время</label>
+            <select id="time">
+                <option>Любое время</option>
+                <option>Утро (до 12:00)</option>
+                <option>День (12:00 - 18:00)</option>
+                <option>Вечер (после 18:00)</option>
+            </select>
+        </div>
+        
+        <button class="show-btn">Показать</button>
+    </section>
+
+    <!-- Date Selector -->
+    <div class="date-selector">
+        <div class="date-item active">
+            <div class="day-of-week">Пн</div>
+            <div class="date-number">8</div>
+            <div class="month">дек</div>
+        </div>
+        <div class="date-item">
+            <div class="day-of-week">Вт</div>
+            <div class="date-number">9</div>
+            <div class="month">дек</div>
+        </div>
+        <div class="date-item">
+            <div class="day-of-week">Ср</div>
+            <div class="date-number">10</div>
+            <div class="month">дек</div>
+        </div>
+        <div class="date-item">
+            <div class="day-of-week">Чт</div>
+            <div class="date-number">11</div>
+            <div class="month">дек</div>
+        </div>
+        <div class="date-item">
+            <div class="day-of-week">Пт</div>
+            <div class="date-number">12</div>
+            <div class="month">дек</div>
+        </div>
+        <div class="date-item">
+            <div class="day-of-week">Сб</div>
+            <div class="date-number">13</div>
+            <div class="month">дек</div>
+        </div>
+        <div class="date-item">
+            <div class="day-of-week">Вс</div>
+            <div class="date-number">14</div>
+            <div class="month">дек</div>
+        </div>
+    </div>
+
+    <!-- Movie Sessions -->
+    <div class="movie-sessions">
+        <!-- Человек-бензопила -->
+        <div class="session-card">
+            <div class="movie-header">
+                <h2 class="movie-title">Человек-бензопила</h2>
+                <div class="movie-meta">
+                    <div class="rating">
+                        <i class="fas fa-star"></i> 8.7
+                    </div>
+                    <div class="movie-tags">
+                        <span class="tag">Приключения</span>
+                        <span class="tag">1ч40м</span>
+                    </div>
+                    <div class="age-limit">18+</div>
+                </div>
+            </div>
+            <div>
+                <img src="assets/Rectangle 46.png" class="rect46">
+            </div>
+            <div class="movie-body">
+                <p class="movie-description">Спасая мир от Чёрного Зла, Человек превращается в оружие.</p>
+                
+                <div class="formats">
+                    <span class="format-label">Форматы:</span>
+                    <span class="format-badge">2D</span>
+                    <span class="format-badge active">3D</span>
+                    <span class="format-badge">IMAX</span>
+                </div>
+                
+                <div class="session-times">
+                    <div class="time-slot">
+                        <div class="time">10:30</div>
+                        <div class="price">450₽</div>
+                        <span class="format">2D</span>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">13:15</div>
+                        <div class="price">550₽</div>
+                        <span class="format">3D</span>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">16:30</div>
+                        <div class="price">650₽</div>
+                        <span class="format">3D</span>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">20:00</div>
+                        <div class="price">750₽</div>
+                        <span class="format">IMAX</span>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn btn-primary">Купить билет</a>
+            </div>
+        </div>
+        
+        <!-- Иллюзия обмана 3 -->
+        <div class="session-card">
+            <div class="movie-header">
+                <h2 class="movie-title">Иллюзия обмана 3</h2>
+                <div class="movie-meta">
+                    <div class="movie-tags">
+                        <span class="tag">Криминал</span>
+                        <span class="tag">1ч52м</span>
+                    </div>
+                    <div class="age-limit">18+</div>
+                </div>
+            </div>
+            <div>
+                <img src="assets/Rectangle 48.png" class="react48">
+            </div>
+            <div class="movie-body">
+                <div class="formats">
+                    <span class="format-label">Форматы:</span>
+                    <span class="format-badge">2D</span>
+                    <span class="format-badge">3D</span>
+                    <span class="format-badge active">IMAX</span>
+                </div>
+                
+                <div class="session-times">
+                    <div class="time-slot">
+                        <div class="time">10:30</div>
+                        <div class="price">450₽</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">13:15</div>
+                        <div class="price">550₽</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">16:30</div>
+                        <div class="price">650₽</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">20:00</div>
+                        <div class="price">750₽</div>
+                        <span class="format">IMAX</span>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn btn-primary">Купить билет</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Price Information -->
+    <section class="price-info">
+        <h3>Форматы и цены</h3>
+        <div class="formats">
+            <span class="format-badge active">2D</span>
+            <span class="format-badge">3D</span>
+            <span class="format-badge">IMAX</span>
+            <span class="format-badge">4DX</span>
+        </div>
+        
+        <div class="price-categories">
+            <div class="price-category">
+                <h4>Утро (-20%)</h4>
+                <p>Сеансы до 12:00. Скидка 20% на все форматы.</p>
+            </div>
+            <div class="price-category">
+                <h4>День (стандарт)</h4>
+                <p>Сеансы с 12:00 до 18:00. Стандартные цены.</p>
+            </div>
+            <div class="price-category">
+                <h4>Вечер (премиум)</h4>
+                <p>Сеансы после 18:00. Премиум-тарифы.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FUTUREKINO</h3>
+                <p>Лучший кинотеатр вашего города с новейшими технологиями и комфортными залами.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="#">Расписание</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Кинотеатры</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Кинокарта</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Кинотеатры</h4>
+                <ul>
+                    <li><a href="#">Top Cinema</a></li>
+                    <li><a href="#">KinoMax</a></li>
+                    <li><a href="#">Киномакс-IMAX</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <div class="contact-info">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-67</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@cinemax.ru</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Казань, ул. Кинотеатральная, 32</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024 CINEMAX. Все права защищены</p>
+        </div>
+    </footer>
+
+   
+</body>

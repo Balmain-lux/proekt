@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/zveropolisstyle.css">
+    <title>Secure Messaging</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-film"></i>
+            FUTUREKINO
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Расписание</a></li>
+                <li><a href="#">Фильмы</a></li>
+                <li><a href="#">Кинотеатры</a></li>
+                <li><a href="#">Кинокарта</a></li>
+                <li><a href="#">Акции</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="#" class="btn btn-login">Войти</a>
+                <a href="#" class="btn btn-primary">Купить билет</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Movie Hero Section -->
+    <section class="movie-hero">
+        <div class="movie-hero-content">
+            <h1 class="movie-title-large">ЗВЕРОПОЛИС 2</h1>
+            <h2 class="movie-title-medium">Зверополис</h2>
+            
+            <div class="movie-rating">
+                <div class="rating-stars">★★★★★</div>
+                <div class="rating-number">8.9</div>
+            </div>
+            
+            <div class="movie-tags">
+                <span class="movie-tag">Мультфильм, Комедия, Приключения</span>
+                <span class="movie-tag">•</span>
+                <span class="movie-tag">2025</span>
+                <span class="movie-tag">•</span>
+                <span class="movie-tag">1ч 48м</span>
+                <span class="movie-tag">•</span>
+                <span class="movie-tag">США</span>
+            </div>
+            
+            <div class="movie-details">
+                <div class="detail-item">
+                    <span class="age-limit">6+</span>
+                </div>
+            </div>
+            
+            <p class="movie-description">
+                Джуди Хоппс и Ник Уайлд возвращаются в новых захватывающих приключениях в Зверополисе! 
+                Новые загадочные дела, нераскрытые преступления и веселые приключения ждут наших героев.
+            </p>
+            
+            <div class="movie-actions">
+                <a href="#" class="btn btn-outline">Смотреть трейлер</a>
+                <a href="#" class="btn btn-primary">Купить билет</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="tabs-section">
+        <div class="tabs-header">
+            <button class="tab-btn active" data-tab="about">О фильме</button>
+            <button class="tab-btn" data-tab="actors">Актеры</button>
+            <button class="tab-btn" data-tab="reviews">Отзывы</button>
+            <button class="tab-btn" data-tab="photos">Фото</button>
+        </div>
+        
+        <!-- About Tab -->
+        <div class="tab-content active" id="about-tab">
+            <div class="about-content">
+                <div>
+                    <div class="info-section">
+                        <h3 class="info-title">Режиссер:</h3>
+                        <ul class="info-list">
+                            <li><i class="fas fa-user"></i> Джон Лассетер</li>
+                            <li><i class="fas fa-user"></i> Байрон Ховард</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3 class="info-title">В ролях:</h3>
+                        <ul class="info-list">
+                            <li><i class="fas fa-star"></i> Джиннифер Гудвин</li>
+                            <li><i class="fas fa-star"></i> Джейсон Бейтман</li>
+                            <li><i class="fas fa-star"></i> Идрис Эльба</li>
+                            <li><i class="fas fa-star"></i> Шакира</li>
+                            <li><i class="fas fa-star"></i> Дж.К. Симмонс</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="info-section">
+                        <h3 class="info-title">Сюжет:</h3>
+                        <p class="plot-text">
+                            Джуди Хоппс и Ник Уайлд возвращаются в новых захватывающих приключениях в Зверополисе!
+                            Новые загадочные дела, нераскрытые преступления и веселые приключения ждут наших
+                            героев. В этом сиквеле их ждут новые друзья, опасные противники и удивительные 
+                            открытия о мире Зверополиса.
+                        </p>
+                        <div class="award-badge">
+                            <i class="fas fa-trophy"></i>
+                            <span>Лучший анимационный фильм 2024 • Премия Оскар</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Actors Tab -->
+        <div class="tab-content" id="actors-tab">
+            <div class="actors-grid">
+                <div class="actor-card">
+                    <div class="actor-name">Джиннифер Гудвин</div>
+                    <div class="actor-role">Роль: Джуди Хоппс</div>
+                </div>
+                <div class="actor-card">
+                    <div class="actor-name">Джейсон Бейтман</div>
+                    <div class="actor-role">Роль: Ник Уайлд</div>
+                </div>
+                <div class="actor-card">
+                    <div class="actor-name">Идрис Эльба</div>
+                    <div class="actor-role">Роль: Шеф Бого</div>
+                </div>
+                <div class="actor-card">
+                    <div class="actor-name">Шакира</div>
+                    <div class="actor-role">Роль: Газель</div>
+                </div>
+                <div class="actor-card">
+                    <div class="actor-name">Джон Лассетер</div>
+                    <div class="actor-role">Режиссер</div>
+                </div>
+                <div class="actor-card">
+                    <div class="actor-name">Байрон Ховард</div>
+                    <div class="actor-role">Режиссер</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Reviews Tab -->
+        <div class="tab-content" id="reviews-tab">
+            <div class="info-section">
+                <h3 class="info-title">Отзывы появятся скоро</h3>
+                <p class="plot-text">Будьте первым, кто оставит отзыв об этом фильме!</p>
+            </div>
+        </div>
+        
+        <!-- Photos Tab -->
+        <div class="tab-content" id="photos-tab">
+            <div class="info-section">
+                <h3 class="info-title">Галерея</h3>
+                <p class="plot-text">Фотографии и кадры из фильма будут доступны в ближайшее время.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule-section">
+        <h2 class="section-title">Расписание сеансов</h2>
+        
+        <div class="schedule-header">
+            <div class="cinema-selector">
+                <select class="cinema-dropdown">
+                    <option>Все кинотеатры</option>
+                    <option>CINEMAX Plaza</option>
+                    <option>CINEMAX Galaxy</option>
+                    <option>CINEMAX Arena</option>
+                </select>
+                <span class="dropdown-icon">▼</span>
+            </div>
+        </div>
+        
+        <div class="date-selector">
+            <div class="date-item active">
+                <div class="day-name">Сегодня</div>
+                <div class="date-main">8 дек</div>
+            </div>
+            <div class="date-item">
+                <div class="day-name">Завтра</div>
+                <div class="date-main">9 дек</div>
+            </div>
+            <div class="date-item">
+                <div class="day-name">Ср</div>
+                <div class="date-main">10 дек</div>
+            </div>
+            <div class="date-item">
+                <div class="day-name">Чт</div>
+                <div class="date-main">11 дек</div>
+            </div>
+            <div class="date-item">
+                <div class="day-name">Пт</div>
+                <div class="date-main">12 дек</div>
+            </div>
+            <div class="date-item">
+                <div class="day-name">Сб</div>
+                <div class="date-main">13 дек</div>
+            </div>
+            <div class="date-item">
+                <div class="day-name">Вс</div>
+                <div class="date-main">14 дек</div>
+            </div>
+        </div>
+        
+        <div class="cinema-schedule">
+            <!-- CINEMAX Plaza -->
+            <div class="cinema-card">
+                <div class="cinema-header">
+                    <h3 class="cinema-name">CINEMAX Plaza</h3>
+                    <div class="cinema-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ул. Центральная, 15</span>
+                    </div>
+                    <div class="cinema-metro">
+                        <i class="fas fa-subway"></i>
+                        <span>Площадь Революции</span>
+                    </div>
+                </div>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Цена</th>
+                            <th>Формат</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-slot">10:30</td>
+                            <td class="price-slot">450₽</td>
+                            <td><span class="format-slot">2D</span></td>
+                            <td><a href="#" class="btn btn-primary">Купить</a></td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">13:15</td>
+                            <td class="price-slot">550₽</td>
+                            <td><span class="format-slot">3D</span></td>
+                            <td><a href="#" class="btn btn-primary">Купить</a></td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">16:30</td>
+                            <td class="price-slot">650₽</td>
+                            <td><span class="format-slot">IMAX</span></td>
+                            <td><a href="#" class="btn btn-primary">Купить</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- CINEMAX Galaxy -->
+            <div class="cinema-card">
+                <div class="cinema-header">
+                    <h3 class="cinema-name">CINEMAX Galaxy</h3>
+                    <div class="cinema-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ш. Космонавтов, 88</span>
+                    </div>
+                    <div class="cinema-metro">
+                        <i class="fas fa-subway"></i>
+                        <span>Звездная</span>
+                    </div>
+                </div>
+                
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Цена</th>
+                            <th>Формат</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-slot">11:30</td>
+                            <td class="price-slot">450₽</td>
+                            <td><span class="format-slot">2D</span></td>
+                            <td><a href="#" class="btn btn-primary">Купить</a></td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">14:15</td>
+                            <td class="price-slot">550₽</td>
+                            <td><span class="format-slot">3D</span></td>
+                            <td><a href="#" class="btn btn-primary">Купить</a></td>
+                        </tr>
+                        <tr>
+                            <td class="time-slot">17:30</td>
+                            <td class="price-slot">650₽</td>
+                            <td><span class="format-slot">IMAX</span></td>
+                            <td><a href="#" class="btn btn-primary">Купить</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Movies Section -->
+    <section class="similar-movies">
+        <h2 class="section-title">Похожие мультфильмы</h2>
+        
+        <div class="movies-grid">
+            <!-- Моана -->
+            <div class="movie-card">
+                <div class="movie-card-header">
+                    <h3 class="movie-card-title">МОАНА</h3>
+                    <div>
+                    <img src="assets/moana.png">
+                </div>
+                    <div class="movie-card-status">УЖЕ В КИНО</div>
+                </div>
+                
+                <div class="movie-card-body">
+                    <div class="movie-card-details">Фантастика, 2ч 18м</div>
+                    <div class="movie-card-meta">
+                        <div class="movie-card-rating">
+                            <i class="fas fa-star"></i> 8.7
+                        </div>
+                        <div class="movie-card-age">16+</div>
+                    </div>
+                    <div class="movie-card-actions">
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Гадкий Я 2 -->
+            <div class="movie-card">
+                <div class="movie-card-header">
+                    <h3 class="movie-card-title">ГАДКИЙ Я 2</h3>
+                    <div>
+                    <img src="assets/gadkiy.png" alt="">
+                </div>
+                    <div class="movie-card-status">УЖЕ В КИНО</div>
+                </div>
+                <div class="movie-card-body">
+                    <div class="movie-card-details">Семейный, 1ч 30м</div>
+                    <div class="movie-card-meta">
+                        <div class="movie-card-rating">
+                            <i class="fas fa-star"></i> 7.7
+                        </div>
+                        <div class="movie-card-age">6+</div>
+                    </div>
+                    <div class="movie-card-actions">
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Холодное Сердце 2 -->
+            <div class="movie-card">
+                <div class="movie-card-header">
+                    <h3 class="movie-card-title">ХОЛОДНОЕ СЕРДЦЕ 2</h3>
+                    <div>
+                    <img src="assets/snezhnaya.png" alt="">
+                    </div>
+                    <div class="movie-card-status">УЖЕ В КИНО</div>
+                </div>
+                <div class="movie-card-body">
+                    <div class="movie-card-details">Мультфильм, 1ч 43м</div>
+                    <div class="movie-card-meta">
+                        <div class="movie-card-rating">
+                            <i class="fas fa-star"></i> 7.4
+                        </div>
+                        <div class="movie-card-age">6+</div>
+                    </div>
+                    <div class="movie-card-actions">
+                        <a href="#" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FUTUREKINO</h3>
+                <p>Лучший кинотеатр вашего города с новейшими технологиями и комфортными залами.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="#">Расписание</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Кинотеатры</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Кинокарта</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Кинотеатры</h4>
+                <ul>
+                    <li><a href="#">Top Cinema</a></li>
+                    <li><a href="#">KinoMax</a></li>
+                    <li><a href="#">Киномакс-IMAX</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <div class="contact-info">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-67</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@cinemax.ru</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Казань, ул. Кинотеатральная, 32</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024 CINEMAX. Все права защищены</p>
+        </div>
+    </footer>
+
+    
+</body>

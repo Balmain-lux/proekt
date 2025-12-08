@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/zverostyle.css">
+    <title>Secure Messaging</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-film"></i>
+            FUTUREKINO
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Расписание</a></li>
+                <li><a href="#">Фильмы</a></li>
+                <li><a href="#">Кинотеатры</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Кинокарта</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="#" class="btn btn-login">Войти</a>
+                <a href="#" class="btn btn-primary">Купить билет</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li class="separator">›</li>
+            <li><a href="#">Фильмы</a></li>
+            <li class="separator">›</li>
+            <li><a href="#">Зверополис 2</a></li>
+            <li class="separator">›</li>
+            <li class="current">Выбор сеанса</li>
+        </ul>
+    </div>
+
+    <div class="img-zvero">
+        <img src="assets/zveropolis.png" >
+    </div>
+
+    <!-- Movie Header -->
+    <div class="movie-header">
+        <div class="movie-title-row">
+            <div class="movie-rating">
+                <i class="fas fa-star"></i> 8.9
+            </div>
+            <div class="movie-tags">
+                <span>Мультфильм, Комедия, Приключения</span>
+                <span>•</span>
+                <span>2025</span>
+                <span>•</span>
+                <span>1ч 48м</span>
+                <span>•</span>
+                <span>США</span>
+            </div>
+        </div>
+        
+        <div class="movie-details">
+            <div class="detail-item">
+                <span class="age-limit">6+</span>
+            </div>
+        </div>
+        
+        <div class="movie-format">
+            <span>2D</span>
+            <span>•</span>
+            <span>Русская озвучка</span>
+        </div>
+    </div>
+
+    <!-- Session Filters -->
+    <div class="session-filters">
+        <div class="filter-card">
+            <h3 class="filter-title">Кинотеатр:</h3>
+            <div class="filter-options">
+                <div class="filter-option active">
+                    <input type="radio" id="cinema1" name="cinema" class="option-radio" checked>
+                    <div class="option-label">
+                        <span class="option-main">CINEMAX Plaza</span>
+                    </div>
+                </div>
+                <div class="filter-option">
+                    <input type="radio" id="cinema2" name="cinema" class="option-radio">
+                    <div class="option-label">
+                        <span class="option-main">CINEMAX Galaxy</span>
+                    </div>
+                </div>
+                <div class="filter-option">
+                    <input type="radio" id="cinema3" name="cinema" class="option-radio">
+                    <div class="option-label">
+                        <span class="option-main">CINEMAX Arena</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-card">
+            <h3 class="filter-title">Дата:</h3>
+            <div class="filter-options">
+                <div class="filter-option active">
+                    <input type="radio" id="date1" name="date" class="option-radio" checked>
+                    <div class="option-label">
+                        <span class="option-main">Сегодня</span>
+                        <span class="option-sub">8 декабря</span>
+                    </div>
+                </div>
+                <div class="filter-option">
+                    <input type="radio" id="date2" name="date" class="option-radio">
+                    <div class="option-label">
+                        <span class="option-main">Завтра</span>
+                        <span class="option-sub">9 декабря</span>
+                    </div>
+                </div>
+                <div class="filter-option">
+                    <input type="radio" id="date3" name="date" class="option-radio">
+                    <div class="option-label">
+                        <span class="option-main">Ср, 10 дек</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-card">
+            <h3 class="filter-title">Время:</h3>
+            <div class="filter-options">
+                <div class="filter-option">
+                    <input type="radio" id="time1" name="time" class="option-radio">
+                    <div class="option-label">
+                        <span class="option-main">Утро</span>
+                        <span class="option-sub">до 12:00</span>
+                    </div>
+                </div>
+                <div class="filter-option active">
+                    <input type="radio" id="time2" name="time" class="option-radio" checked>
+                    <div class="option-label">
+                        <span class="option-main">День</span>
+                        <span class="option-sub">12:00-17:00</span>
+                    </div>
+                </div>
+                <div class="filter-option">
+                    <input type="radio" id="time3" name="time" class="option-radio">
+                    <div class="option-label">
+                        <span class="option-main">Вечер</span>
+                        <span class="option-sub">после 17:00</span>
+                    </div>
+                </div>
+                <div class="filter-option">
+                    <input type="radio" id="time4" name="time" class="option-radio">
+                    <div class="option-label">
+                        <span class="option-main">Все</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cinema Info -->
+    <div class="cinema-info">
+        <div class="cinema-features">
+            <div class="feature-item">
+                <i class="fas fa-door-open"></i>
+                <span>Зал 5</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-video"></i>
+                <span>IMAX</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chair"></i>
+                <span>250 мест</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-volume-up"></i>
+                <span>Dolby Atmos</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-tv"></i>
+                <span>4K</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-child"></i>
+                <span>Детские кресла</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Session Times -->
+    <div class="session-times">
+        <!-- Session 1 -->
+        <div class="session-card">
+            <div class="session-header">
+                <div class="session-time">
+                    <span>14:30</span>
+                    <span class="session-format">2D</span>
+                    <span class="session-audio">• Русская озвучка</span>
+                </div>
+            </div>
+            
+            <div class="session-details">
+                <div class="session-price">
+                    <span class="price-amount">450₽</span>
+                    <span class="price-category">(стандарт)</span>
+                </div>
+                <div class="session-seats">
+                    <i class="fas fa-chair"></i>
+                    <span class="seats-available">180 мест свободно</span>
+                </div>
+            </div>
+            
+            <div class="session-action">
+                <a href="#" class="btn btn-primary">Выбрать места</a>
+            </div>
+        </div>
+        
+        <!-- Session 2 -->
+        <div class="session-card">
+            <div class="session-header">
+                <div class="session-time">
+                    <span>17:15</span>
+                    <span class="session-format">3D</span>
+                    <span class="session-audio">• Русская озвучка</span>
+                </div>
+            </div>
+            
+            <div class="session-details">
+                <div class="session-price">
+                    <span class="price-amount">550₽</span>
+                    <span class="price-category">(стандарт)</span>
+                </div>
+                <div class="session-seats">
+                    <i class="fas fa-chair"></i>
+                    <span class="seats-available">150 мест свободно</span>
+                </div>
+            </div>
+            
+            <div class="session-action">
+                <a href="#" class="btn btn-primary">Выбрать места</a>
+            </div>
+        </div>
+        
+        <!-- Session 3 -->
+        <div class="session-card">
+            <div class="session-header">
+                <div class="session-time">
+                    <span>20:30</span>
+                    <span class="session-format">2D</span>
+                    <span class="session-audio">• Русская озвучка</span>
+                </div>
+            </div>
+            
+            <div class="session-details">
+                <div class="session-price">
+                    <span class="price-amount">650₽</span>
+                    <span class="price-category">(стандарт)</span>
+                </div>
+                <div class="session-seats">
+                    <i class="fas fa-chair"></i>
+                    <span class="seats-low">5 мест свободно</span>
+                </div>
+            </div>
+            
+            <div class="session-action">
+                <a href="#" class="btn btn-primary">Выбрать места</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Price Comparison -->
+    <div class="price-comparison">
+        <div class="price-section">
+            <h2 class="section-title">Сравнение цен</h2>
+            
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Стандарт</th>
+                        <th>Комфорт</th>
+                        <th>VIP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Утро (до 12:00)</td>
+                        <td class="price-amount-cell">400₽</td>
+                        <td class="price-amount-cell">500₽</td>
+                        <td class="price-amount-cell">700₽</td>
+                    </tr>
+                    <tr>
+                        <td>День (12:00-17:00)</td>
+                        <td class="price-amount-cell">450₽</td>
+                        <td class="price-amount-cell">550₽</td>
+                        <td class="price-amount-cell">750₽</td>
+                    </tr>
+                    <tr>
+                        <td>Вечер (после 17:00)</td>
+                        <td class="price-amount-cell">500₽</td>
+                        <td class="price-amount-cell">600₽</td>
+                        <td class="price-amount-cell">800₽</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="discounts">
+                <p>Студентам -15% при предъявлении студенческого</p>
+                <p>Детям до 12 лет -20% на утренние сеансы</p>
+                <p>Обладателям кинокарты -10% на все сеансы</p>
+            </div>
+            
+            <a href="#" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                <span>Назад к расписанию</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FUTUREKINO</h3>
+                <p>Лучший кинотеатр вашего города с новейшими технологиями и комфортными залами.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="#">Расписание</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Кинотеатры</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Кинокарта</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Кинотеатры</h4>
+                <ul>
+                    <li><a href="#">Top Cinema</a></li>
+                    <li><a href="#">KinoMax</a></li>
+                    <li><a href="#">Киномакс-IMAX</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <div class="contact-info">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-67</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@cinemax.ru</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Казань, ул. Кинотеатральная, 32</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024 CINEMAX. Все права защищены</p>
+        </div>
+    </footer>
+
+</body>

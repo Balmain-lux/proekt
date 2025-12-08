@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/posadkastyle.css">
+    <title>Secure Messaging</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-film"></i> FUTUREKINO
+                </a>
+                <div class="nav-links">
+                    <a href="#">Расписание</a>
+                    <a href="#">Фильмы</a>
+                    <a href="#">Кинотеатры</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Кинокарта</a>
+                </div>
+                <button class="auth-btn">Войти</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="#">Главная</a>
+            <span>></span>
+            <a href="#">Фильмы</a>
+            <span>></span>
+            <a href="#">Зверополис 2</a>
+            <span>></span>
+            <a href="#">Выбор сеанса</a>
+            <span>></span>
+            <span>Выбор мест</span>
+        </div>
+    </div>
+
+    <div class="posad">
+        <img src="assets/posad.png" >
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Order Summary -->
+                <section class="order-summary">
+                    <h2 class="section-title">Ваш заказ</h2>
+                    <div class="selected-items">
+                        <h3>Выбрано:</h3>
+                        <div class="selected-item">
+                            <h4>Ряд 4, Места: 7,8,9</h4>
+                            <p>3 билета × 450P = 1350P</p>
+                        </div>
+                        <div class="selected-item">
+                            <h4>Ряд 6, Место: 7</h4>
+                            <p>1 билет × 550P = 550P</p>
+                        </div>
+                    </div>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>3 билета × 450P</span>
+                            <span>1350P</span>
+                        </div>
+                        <div class="price-row">
+                            <span>1 билет × 550P</span>
+                            <span>550P</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Итого:</span>
+                            <span class="total-amount">1900P</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Payment Form -->
+                <section class="payment-form">
+                    <h2 class="section-title">Оплата</h2>
+                    
+                    <div class="payment-methods">
+                        <div class="method active" id="card-method">
+                            <i class="far fa-credit-card"></i>
+                            <p>Банковская карта</p>
+                        </div>
+                        <div class="method" id="apple-method">
+                            <i class="fab fa-apple"></i>
+                            <p>Apple Pay</p>
+                        </div>
+                        <div class="method" id="bank-method">
+                            <i class="fas fa-university"></i>
+                            <p>Онлайн-банкинг</p>
+                        </div>
+                    </div>
+                    
+                    <form id="paymentForm">
+                        <div class="form-group">
+                            <label for="card-number">Номер карты:</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        
+                        <div class="card-details">
+                            <div class="form-group">
+                                <label for="expiry-date">Срок действия (ММ/ГГ):</label>
+                                <input type="text" id="expiry-date" placeholder="ММ/ГГ" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV:</label>
+                                <input type="text" id="cvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cardholder">Имя держателя:</label>
+                            <input type="text" id="cardholder" placeholder="IVAN IVANOV">
+                        </div>
+                        
+                        <button type="submit" class="pay-button">Оплатить 1900Р</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FUTUREKINO</h3>
+                    <p style="color: #ccc;">Лучший кинотеатр вашего города с новейшими технологиями и комфортными залами.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">Фильмы</a></li>
+                        <li><a href="#">Кинотеатры</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Кинокарта</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Кинотеатры</h3>
+                    <ul>
+                        <li><a href="#">Top Cinema</a></li>
+                        <li><a href="#">KinoMax</a></li>
+                        <li><a href="#">Киномакс-IMAX</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                        <p><i class="fas fa-envelope"></i> info@cinemax.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Казань, ул. Кинотеатральная, 32</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 CINEMAX. Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+</body>

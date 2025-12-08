@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/contactstyle.css">
+    <title>Secure Messaging</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-film"></i> FUTUREKINO
+                </a>
+                <div class="nav-links">
+                    <a href="#">Расписание</a>
+                    <a href="#">Фильмы</a>
+                    <a href="#" style="color: var(--accent);">Кинотеатры</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Кинокарта</a>
+                </div>
+                <button class="auth-btn">Войти</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="#">Главная</a>
+            <span>></span>
+            <span>Контакты</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content container">
+        <h1 class="page-title">Контакты</h1>
+        
+        <!-- Contacts grid -->
+        <div class="contacts-grid">
+            <!-- Кинотеатры -->
+            <div class="contacts-card">
+                <h2 class="card-title">Кинотеатры</h2>
+                
+                <div class="cinema-item">
+                    <div class="cinema-name">CINEMAX Plaza</div>
+                    <div class="cinema-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ул. Центральная, 15<br>Площадь Революции</span>
+                    </div>
+                    <div class="cinema-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-67</span>
+                    </div>
+                    <div class="cinema-hours">10:00 - 02:00</div>
+                </div>
+                
+                <div class="cinema-item">
+                    <div class="cinema-name">CINEMAX Galaxy</div>
+                    <div class="cinema-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ш. Космонавтов, 88<br>Звездная</span>
+                    </div>
+                    <div class="cinema-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-68</span>
+                    </div>
+                    <div class="cinema-hours">10:00 - 02:00</div>
+                </div>
+                
+                <div class="cinema-item">
+                    <div class="cinema-name">CINEMAX IMAX</div>
+                    <div class="cinema-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Казань, ул. Кинотеатральная, 32</span>
+                    </div>
+                    <div class="cinema-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-69</span>
+                    </div>
+                    <div class="cinema-hours">09:00 - 01:00</div>
+                </div>
+            </div>
+            
+            <!-- Реквизиты и FAQ -->
+            <div class="contacts-card">
+                <h2 class="card-title">Реквизиты</h2>
+                
+                <div class="requisites-item">
+                    <div class="requisites-label">Название компании</div>
+                    <div class="requisites-value">ООО "FutureKino"</div>
+                </div>
+                
+                <div class="requisites-item">
+                    <div class="requisites-label">ИНН</div>
+                    <div class="requisites-value">1234567890</div>
+                </div>
+                
+                <div class="requisites-item">
+                    <div class="requisites-label">Email для связи</div>
+                    <div class="requisites-value">info@futurekino.ru</div>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <h2 class="card-title">Вопрос-ответ</h2>
+                    <ul class="faq-list">
+                        <li class="faq-item">Как вернуть билет?</li>
+                        <li class="faq-item">Есть ли парковка?</li>
+                        <li class="faq-item">Можно ли прийти с детьми?</li>
+                        <li class="faq-item">Есть ли скидки для пенсионеров?</li>
+                        <li class="faq-item">Можно ли оплатить картой?</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Форма обратной связи -->
+            <div class="contacts-card">
+                <h2 class="card-title">Обратная связь</h2>
+                <p style="margin-bottom: 25px; color: var(--text-light);">Напишите нам, и мы ответим в течение 24 часов</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="example@mail.ru" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" placeholder="+7 (999) 123-45-67">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" placeholder="Введите ваше сообщение..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FUTUREKINO</h3>
+                    <p style="color: #ccc;">Лучший кинотеатр вашего города с новейшими технологиями и комфортными залами.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">Фильмы</a></li>
+                        <li><a href="#">Кинотеатры</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Кинокарта</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Кинотеатры</h3>
+                    <ul>
+                        <li><a href="#">Top Cinema</a></li>
+                        <li><a href="#">KinoMax</a></li>
+                        <li><a href="#">Киномакс-IMAX</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                        <p><i class="fas fa-envelope"></i> info@cinemax.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Казань, ул. Кинотеатральная, 32</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 CINEMAX. Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+</body>

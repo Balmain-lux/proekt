@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/filmstyle.css">
+    <title>Secure Messaging</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-film"></i>
+            FUTUREKINO
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="#">Расписание</a></li>
+                <li><a href="#" class="active">Фильмы</a></li>
+                <li><a href="#">Кинотеатры</a></li>
+                <li><a href="#">Кинокарта</a></li>
+                <li><a href="#">Акции</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="#" class="btn btn-login">Войти</a>
+                <a href="#" class="btn btn-primary">Купить билет</a>
+            </div>
+        </nav>
+    </header>
+
+   
+
+    <!-- Movie Filters -->
+    <section class="movie-filters">
+        <h2 class="filter-title">Фильмы в прокате</h2>
+        
+        <div class="filter-group search-input">
+            <label for="search">Поиск фильмов</label>
+            <div>
+                <i class="fas fa-search"></i>
+                <input type="text" id="search" placeholder="Название фильма">
+            </div>
+        </div>
+        
+        <div class="filter-group">
+            <label for="genre">Жанр</label>
+            <select id="genre">
+                <option>Все жанры</option>
+                <option>Фантастика</option>
+                <option>Драма</option>
+                <option>Приключения</option>
+                <option>Семейный</option>
+                <option>Криминал</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="format">Формат</label>
+            <select id="format">
+                <option>Все форматы</option>
+                <option>2D</option>
+                <option>3D</option>
+                <option>IMAX</option>
+                <option>4DX</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="rating">Рейтинг</label>
+            <select id="rating">
+                <option>Любой рейтинг</option>
+                <option>Высокий (8+)</option>
+                <option>Средний (6-8)</option>
+                <option>Низкий (до 6)</option>
+            </select>
+        </div>
+        
+        <button class="show-btn">Показать</button>
+    </section>
+
+    <!-- Movie Cards Container -->
+    <div class="movie-cards-container">
+        <!-- Аватар -->
+        <div class="movie-card movie-avatar">
+            <div class="movie-header">
+                <h1 class="movie-main-title">АВАТАР<br>ПУТЬ ВОДЫ</h1>
+                <div class="movie-subtitle">УЖЕ В КИНО</div>
+            </div>
+            <div class="movie-body">
+                <div class="movie-info-card">
+                    <h3 class="movie-title">Аватар: Путь воды</h3>
+                    <div class="movie-details">Фантастика, 2ч 18м</div>
+                    <div class="movie-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.7
+                        </div>
+                        <div class="age-limit">16+</div>
+                    </div>
+                </div>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-primary">Подробнее</a>
+                    <a href="#" class="btn btn-outline">Купить билет</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Авиатор -->
+        <div class="movie-card movie-aviator">
+            <div class="movie-header">
+                <div class="director">РЕЖИССЁР ИГОРЬ ДЫХАЛОВ-КИНЧАЛОВСКАЯ</div>
+                <div class="tagline">ПО ТОЧКАМ СВЕТЛАЯ ПОЛОСА</div>
+                <h1 class="movie-main-title">АВИАТОР</h1>
+                <div class="movie-status-badge">УЖЕ В КИНО</div>
+            </div>
+            <div class="movie-body">
+                <div class="movie-info-card">
+                    <h3 class="movie-title">Авиатор</h3>
+                    <div class="movie-details">Фантастика, 2ч 10м</div>
+                    <div class="movie-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 7.1
+                        </div>
+                        <div class="age-limit">16+</div>
+                    </div>
+                </div>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-primary">Подробнее</a>
+                    <a href="#" class="btn btn-outline">Купить билет</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Сущность -->
+        <div class="movie-card movie-essence">
+            <div class="movie-header">
+                <div class="director">ВЕНЕДИКТ КАМБЕРБЭТЧ</div>
+                <h1 class="movie-main-title">СУЩНОСТЬ</h1>
+                <div class="movie-subtitle">УЖЕ В КИНО</div>
+            </div>
+            <div class="movie-body">
+                <div class="movie-info-card">
+                    <h3 class="movie-title">Сущность</h3>
+                    <div class="movie-details">Драма, 1ч 38м</div>
+                    <div class="movie-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 6.7
+                        </div>
+                        <div class="age-limit">18+</div>
+                    </div>
+                </div>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-primary">Подробнее</a>
+                    <a href="#" class="btn btn-outline">Купить билет</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Выживший -->
+        <div class="movie-card movie-survivor">
+            <div class="movie-header">
+                <h1 class="movie-main-title">ВЫЖИВШИЙ</h1>
+                <div class="movie-status-badge coming-soon">СКОРО</div>
+            </div>
+            <div class="movie-body">
+                <div class="movie-info-card">
+                    <h3 class="movie-title">Выживший</h3>
+                    <div class="movie-details">Фантастика, 2ч 18м</div>
+                    <div class="movie-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 8.7
+                        </div>
+                        <div class="age-limit">16+</div>
+                    </div>
+                </div>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-outline">Скоро</a>
+                    <a href="#" class="btn btn-primary">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Простоквашино -->
+        <div class="movie-card movie-prostokvashino">
+            <div class="movie-header">
+                <h1 class="movie-main-title">ПРОСТОКВАШИНО</h1>
+                <div class="movie-subtitle">СКОРО</div>
+            </div>
+            <div class="movie-body">
+                <div class="movie-info-card">
+                    <h3 class="movie-title">Простоквашино</h3>
+                    <div class="movie-details">Семейный, 1ч 30м</div>
+                    <div class="movie-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i> 7.7
+                        </div>
+                        <div class="age-limit">6+</div>
+                    </div>
+                </div>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-outline">Скоро</a>
+                    <a href="#" class="btn btn-primary">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FUTUREKINO</h3>
+                <p>Лучший кинотеатр вашего города с новейшими технологиями и комфортными залами.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="#">Расписание</a></li>
+                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#">Кинотеатры</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Кинокарта</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Кинотеатры</h4>
+                <ul>
+                    <li><a href="#">Top Cinema</a></li>
+                    <li><a href="#">KinoMax</a></li>
+                    <li><a href="#">Киномакс-IMAX</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <div class="contact-info">
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-67</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@cinemax.ru</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>г. Казань, ул. Кинотеатральная, 32</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024 CINEMAX. Все права защищены</p>
+        </div>
+    </footer>
+
+   
+</body>
