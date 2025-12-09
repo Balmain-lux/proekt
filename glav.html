@@ -15,19 +15,23 @@
                 <span>FUTUREKINO</span>
             </div>
             
-            <button class="mobile-menu-toggle touch-target" id="menuToggle">
+            <a href="#mobileNav" class="mobile-menu-toggle touch-target" id="menuToggle">
                 <i class="fas fa-bars"></i>
-            </button>
+            </a>
         </div>
         
         <nav class="mobile-nav" id="mobileNav">
+            <a href="#" class="close-menu">
+                <i class="fas fa-times"></i>
+            </a>
+            
             <ul>
-                <li><a href="#" class="active">Расписание</a></li>
-                <li><a href="#">Фильмы</a></li>
-                <li><a href="#">Кинотеатры</a></li>
-                <li><a href="#">Кинокарта</a></li>
-                <li><a href="#">Акции</a></li>
-                <li><a href="#">О нас</a></li>
+                <li><a href="raspisanie.html" class="active">Расписание</a></li>
+                <li><a href="film.html">Фильмы</a></li>
+                <li><a href="kinoteatr.html">Кинотеатры</a></li>
+                <li><a href="loyalnost.html">Кинокарта</a></li>
+                <li><a href="akcii.html">Акции</a></li>
+                <li><a href="contact.html">О нас</a></li>
             </ul>
             
             <a href="#" class="mobile-login-btn touch-target">
@@ -36,22 +40,22 @@
         </nav>
     </header>
     
-    <!-- Десктопная навигация (скрыта на мобильных) -->
-    <header class="desktop-header hidden">
+    <!-- Десктопная навигация -->
+    <header class="desktop-header">
         <div class="container">
             <div class="desktop-logo">
                 <i class="fas fa-film desktop-logo-icon"></i>
-                <span>FUTUREKINO</span>
+                <span><a href="glav.html">FUTUREKINO</a></span>
             </div>
             
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#" class="active">Расписание</a></li>
-                    <li><a href="#">Фильмы</a></li>
-                    <li><a href="#">Кинотеатры</a></li>
-                    <li><a href="#">Кинокарта</a></li>
-                    <li><a href="#">Акции</a></li>
-                    <li><a href="#">О нас</a></li>
+                    <li><a href="raspisanie.html" class="active">Расписание</a></li>
+                    <li><a href="film.html">Фильмы</a></li>
+                    <li><a href="kinoteatr.html">Кинотеатры</a></li>
+                    <li><a href="loyalnost.html">Кинокарта</a></li>
+                    <li><a href="akcii.html">Акции</a></li>
+                    <li><a href="contact.html">О нас</a></li>
                 </ul>
             </nav>
             
@@ -262,52 +266,4 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Мобильное меню
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menuToggle');
-            const mobileNav = document.getElementById('mobileNav');
-            
-            menuToggle.addEventListener('click', function() {
-                mobileNav.classList.toggle('active');
-                menuToggle.innerHTML = mobileNav.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-            });
-            
-            // Закрытие меню при клике на ссылку
-            const navLinks = document.querySelectorAll('.mobile-nav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileNav.classList.remove('active');
-                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                });
-            });
-            
-        
-            
-            // Показываем десктопную версию на больших экранах
-            function checkScreenSize() {
-                const mobileHeader = document.querySelector('.mobile-header');
-                const desktopHeader = document.querySelector('.desktop-header');
-                
-                if (window.innerWidth >= 768) {
-                    mobileHeader.classList.add('hidden');
-                    desktopHeader.classList.remove('hidden');
-                } else {
-                    mobileHeader.classList.remove('hidden');
-                    desktopHeader.classList.add('hidden');
-                    // Закрываем мобильное меню при переходе на десктоп
-                    mobileNav.classList.remove('active');
-                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            }
-            
-            // Проверяем при загрузке и изменении размера окна
-            checkScreenSize();
-            window.addEventListener('resize', checkScreenSize);
-            
-        });
-    </script>
 </body>
