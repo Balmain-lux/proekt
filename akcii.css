@@ -1,6 +1,6 @@
 :root {
-            --primary: #1a1a2e;
-            --secondary: #16213e;
+            --primary: #2D2B55;
+            --secondary: #2D2B55;
             --accent: #00b4ff;
             --light: #f0f0f0;
             --dark: #0f0f1a;
@@ -9,10 +9,10 @@
             --card-bg: #fff;
             --border: #ddd;
             --success: #4caf50;
-            --promo1: #1a1a2e;
-            --promo2: #1a1a2e;
-            --promo3: #1a1a2e;
-            --promo4: #1a1a2e;
+            --promo1: #2D2B55;
+            --promo2: #2D2B55;
+            --promo3: #2D2B55;
+            --promo4: #2D2B55;
         }
         
         * {

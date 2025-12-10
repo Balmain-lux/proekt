@@ -1,4 +1,4 @@
- :root {
+  :root {
             --primary: #2D2B55;
             --secondary: #2D2B55;
             --accent: #00b4ff;
@@ -33,8 +33,6 @@
             padding: 0 20px;
         }
 
-        
-        
         /* Header styles */
         header {
             background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -91,7 +89,7 @@
         }
         
         .auth-btn:hover {
-            background-color: #d43a55;
+            background-color: #0099cc;
         }
         
         .breadcrumbs {
@@ -115,6 +113,253 @@
             margin: 0 8px;
         }
         
+        /* Блок выбора мест */
+        .seat-selection {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .seat-selection-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .seat-selection-header h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .movie-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .cinema-screen {
+            width: 90%;
+            height: 25px;
+            background: linear-gradient(to top, #4a4a4a, #2a2a2a);
+            margin: 0 auto 40px;
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 3px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cinema-screen:before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 10%;
+            right: 10%;
+            height: 10px;
+            background: radial-gradient(circle, rgba(0, 180, 255, 0.3) 0%, transparent 70%);
+        }
+        
+        .seats-container {
+            width: 100%;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .seats-grid {
+            display: grid;
+            grid-template-rows: repeat(9, 1fr);
+            gap: 12px;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        
+        .seat-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .row-label {
+            color: var(--primary);
+            font-weight: bold;
+            width: 30px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .seat {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px 6px 4px 4px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .seat:hover {
+            transform: scale(1.15);
+            box-shadow: 0 5px 10px rgba(0, 180, 255, 0.3);
+        }
+        
+        /* Стандартные места */
+        .seat.standard {
+            background-color: #4CAF50;
+        }
+        
+        .seat.standard:hover {
+            background-color: #5CBF60;
+        }
+        
+        /* Комфортные места */
+        .seat.comfort {
+            background-color: #2196F3;
+        }
+        
+        .seat.comfort:hover {
+            background-color: #31A6FF;
+        }
+        
+        /* VIP места */
+        .seat.vip {
+            background-color: #FF9800;
+        }
+        
+        .seat.vip:hover {
+            background-color: #FFA820;
+        }
+        
+        /* Занятые места */
+        .seat.occupied {
+            background-color: #757575;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        
+        .seat.occupied:hover {
+            transform: none;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Выбранные места */
+        .seat.selected {
+            animation: pulse 1.5s infinite;
+            transform: scale(1.1);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 180, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 180, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 180, 255, 0); }
+        }
+        
+        /* Разделитель между блоками мест */
+        .seat-divider {
+            width: 20px;
+        }
+        
+        .seat-divider.large {
+            width: 40px;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 25px;
+            height: 25px;
+            border-radius: 4px;
+        }
+        
+        .legend-text {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        
+        .selected-info-seats {
+            background-color: rgba(0, 180, 255, 0.05);
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .selected-info-seats h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .selected-seats-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .selected-seat-tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Анимация при выборе места */
+        @keyframes selectSeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1.1); }
+        }
+        
+        .seat:active {
+            animation: selectSeat 0.3s ease;
+        }
+        
         /* Main content */
         .main-content {
             flex: 1;
@@ -125,12 +370,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-        }
-
-        .posad{
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         /* Order summary */
@@ -222,7 +461,7 @@
         
         .method.active {
             border-color: var(--accent);
-            background-color: rgba(233, 69, 96, 0.05);
+            background-color: rgba(0, 180, 255, 0.05);
         }
         
         .method i {
@@ -280,7 +519,7 @@
         }
         
         .pay-button:hover {
-            background-color: #d43a55;
+            background-color: #0099cc;
         }
         
         /* Footer */
@@ -345,6 +584,39 @@
             font-size: 14px;
         }
         
+        /* Адаптивность для выбора мест */
+        @media (max-width: 1100px) {
+            .seat {
+                width: 28px;
+                height: 28px;
+                font-size: 0.7rem;
+            }
+            
+            .seat-divider {
+                width: 15px;
+            }
+            
+            .seat-divider.large {
+                width: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .seat {
+                width: 22px;
+                height: 22px;
+                font-size: 0.6rem;
+            }
+            
+            .seat-selection-header h2 {
+                font-size: 20px;
+            }
+            
+            .legend {
+                gap: 15px;
+            }
+        }
+        
         /* Mobile responsiveness */
         @media (max-width: 992px) {
             .content-wrapper {
@@ -387,7 +659,7 @@
                 padding: 0 15px;
             }
             
-            .order-summary, .payment-form {
+            .order-summary, .payment-form, .seat-selection {
                 padding: 20px;
             }
             

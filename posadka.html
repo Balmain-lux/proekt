@@ -11,8 +11,9 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">
-                    <i class="fas fa-film"></i> FUTUREKINO
+                <a href="glav.html" class="logo">
+                    <i class="fas fa-film"></i> 
+                    FUTUREKINO
                 </a>
                 <div class="nav-links">
                     <a href="raspisanie.html">Расписание</a>
@@ -42,8 +43,57 @@
         </div>
     </div>
 
-    <div class="posad">
-        <img src="assets/posad.png" >
+    <!-- Блок выбора мест -->
+    <div class="container">
+        <section class="seat-selection">
+            <div class="seat-selection-header">
+                <h2><i class="fas fa-chair"></i> Выбор посадочных мест</h2>
+                <div class="movie-info">
+                    <span><i class="far fa-calendar-alt"></i> Сегодня, 19:30</span>
+                    <span><i class="fas fa-ticket-alt"></i> Зал 5</span>
+                    <span><i class="fas fa-film"></i> Зверополис 2</span>
+                </div>
+            </div>
+
+            <div class="cinema-screen">ЭКРАН</div>
+
+            <div class="seats-container">
+                <div class="seats-grid" id="seatsGrid">
+                    <!-- Ряды мест будут сгенерированы JavaScript -->
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #4CAF50;"></div>
+                    <span class="legend-text">Стандартные места</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #2196F3;"></div>
+                    <span class="legend-text">Комфортные места</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #FF9800;"></div>
+                    <span class="legend-text">VIP места</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #757575;"></div>
+                    <span class="legend-text">Занятые места</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #00b4ff; animation: pulse 1.5s infinite;"></div>
+                    <span class="legend-text">Выбранные места</span>
+                </div>
+            </div>
+
+            <div class="selected-info-seats">
+                <h3><i class="fas fa-ticket-alt"></i> Ваши выбранные места:</h3>
+                <div class="selected-seats-list" id="selectedSeatsList">
+                    <!-- Выбранные места будут отображаться здесь -->
+                </div>
+                <p style="margin-top: 15px; color: var(--text-light); font-size: 0.9rem;">Для выбора места нажмите на него. Повторное нажатие отменяет выбор.</p>
+            </div>
+        </section>
     </div>
 
     <!-- Main Content -->
@@ -75,7 +125,7 @@
                         </div>
                         <div class="total-row">
                             <span>Итого:</span>
-                            <span class="total-amount">1900P</span>
+                            <span class="total-amount" id="totalAmount">1900P</span>
                         </div>
                     </div>
                 </section>
@@ -121,7 +171,7 @@
                             <input type="text" id="cardholder" placeholder="IVAN IVANOV">
                         </div>
                         
-                        <button type="submit" class="pay-button">Оплатить 1900Р</button>
+                        <button type="submit" class="pay-button">Оплатить <span id="payAmount">1900</span>Р</button>
                     </form>
                 </section>
             </div>
@@ -161,15 +211,242 @@
                     <h3>Контакты</h3>
                     <div class="contact-info">
                         <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
-                        <p><i class="fas fa-envelope"></i> info@cinemax.ru</p>
+                        <p><i class="fas fa-envelope"></i> info@futurekino.ru</p>
                         <p><i class="fas fa-map-marker-alt"></i> г. Казань, ул. Кинотеатральная, 32</p>
                     </div>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>© 2024 CINEMAX. Все права защищены</p>
+                <p>© 2024 FUTUREKINO. Все права защищены</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const seatsGrid = document.getElementById('seatsGrid');
+            const selectedSeatsList = document.getElementById('selectedSeatsList');
+            const totalAmountElement = document.getElementById('totalAmount');
+            const payAmountElement = document.getElementById('payAmount');
+            
+            // Буквы для рядов
+            const rowLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+            
+            // Цены по типам мест
+            const seatPrices = {
+                'vip': 600,
+                'comfort': 500,
+                'standard': 450
+            };
+            
+            // Типы мест по рядам: VIP (A-C), комфорт (D-F), стандарт (G-I)
+            const getSeatType = (rowIndex) => {
+                if (rowIndex < 3) return 'vip';
+                if (rowIndex < 6) return 'comfort';
+                return 'standard';
+            };
+            
+            // Инициализация выбранных мест и общей суммы
+            let selectedSeats = [];
+            let totalAmount = 0;
+            
+            // Создаем ряды с местами
+            for (let row = 0; row < 9; row++) {
+                const rowElement = document.createElement('div');
+                rowElement.className = 'seat-row';
+                
+                // Добавляем букву ряда
+                const rowLabel = document.createElement('div');
+                rowLabel.className = 'row-label';
+                rowLabel.textContent = rowLetters[row];
+                rowElement.appendChild(rowLabel);
+                
+                // Создаем 16 мест в ряду
+                for (let seatNum = 1; seatNum <= 16; seatNum++) {
+                    // Добавляем разделитель после 8-го места
+                    if (seatNum === 9) {
+                        const divider = document.createElement('div');
+                        divider.className = 'seat-divider large';
+                        rowElement.appendChild(divider);
+                    }
+                    
+                    const seat = document.createElement('div');
+                    const seatType = getSeatType(row);
+                    seat.className = `seat ${seatType}`;
+                    
+                    // Делаем некоторые места занятыми (примерно 20%)
+                    const isOccupied = Math.random() < 0.2 && 
+                                      !(row === 4 && seatNum === 8) && 
+                                      !(row === 5 && seatNum === 9) &&
+                                      !(row === 6 && seatNum === 7);
+                    
+                    if (isOccupied) {
+                        seat.classList.add('occupied');
+                    }
+                    
+                    // Устанавливаем данные места
+                    seat.dataset.row = rowLetters[row];
+                    seat.dataset.number = seatNum;
+                    seat.dataset.id = `${rowLetters[row]}${seatNum}`;
+                    seat.dataset.type = seatType;
+                    seat.dataset.price = seatPrices[seatType];
+                    
+                    // Добавляем номер места (только для VIP и комфортных)
+                    if (row < 6) {
+                        seat.textContent = seatNum;
+                    }
+                    
+                    // Добавляем обработчик выбора места
+                    seat.addEventListener('click', function() {
+                        // Если место занято - не обрабатываем
+                        if (this.classList.contains('occupied')) return;
+                        
+                        const seatId = this.dataset.id;
+                        const seatIndex = selectedSeats.findIndex(s => s.id === seatId);
+                        
+                        // Если место уже выбрано - удаляем его
+                        if (seatIndex !== -1) {
+                            selectedSeats.splice(seatIndex, 1);
+                            this.classList.remove('selected');
+                        } else {
+                            // Добавляем место в выбранные
+                            selectedSeats.push({
+                                id: seatId,
+                                row: this.dataset.row,
+                                number: this.dataset.number,
+                                type: this.dataset.type,
+                                price: parseInt(this.dataset.price)
+                            });
+                            this.classList.add('selected');
+                        }
+                        
+                        // Обновляем список выбранных мест и сумму
+                        updateSelectedSeatsList();
+                        updateOrderSummary();
+                    });
+                    
+                    rowElement.appendChild(seat);
+                    
+                    // Добавляем небольшой разделитель между местами (кроме последнего)
+                    if (seatNum !== 16 && seatNum !== 8) {
+                        const smallDivider = document.createElement('div');
+                        smallDivider.className = 'seat-divider';
+                        rowElement.appendChild(smallDivider);
+                    }
+                }
+                
+                seatsGrid.appendChild(rowElement);
+            }
+            
+            // Функция обновления списка выбранных мест
+            function updateSelectedSeatsList() {
+                selectedSeatsList.innerHTML = '';
+                
+                if (selectedSeats.length === 0) {
+                    selectedSeatsList.innerHTML = '<p style="color:#aaa;">Вы еще не выбрали места</p>';
+                    return;
+                }
+                
+                selectedSeats.forEach(seat => {
+                    const seatTag = document.createElement('div');
+                    seatTag.className = 'selected-seat-tag';
+                    seatTag.innerHTML = `<i class="fas fa-chair"></i> ${seat.row}${seat.number}`;
+                    selectedSeatsList.appendChild(seatTag);
+                });
+            }
+            
+            // Функция обновления заказа
+            function updateOrderSummary() {
+                totalAmount = selectedSeats.reduce((sum, seat) => sum + seat.price, 0);
+                
+                // Обновляем сумму в блоке заказа
+                totalAmountElement.textContent = `${totalAmount}P`;
+                payAmountElement.textContent = totalAmount;
+                
+                // Обновляем текст кнопки оплаты
+                document.querySelector('.pay-button').innerHTML = `Оплатить ${totalAmount}Р`;
+            }
+            
+            // Инициализируем список выбранных мест
+            updateSelectedSeatsList();
+            
+            // Добавляем несколько предварительно выбранных мест для демонстрации
+            setTimeout(() => {
+                // Выбираем несколько мест для демонстрации
+                const demoSeats = [
+                    document.querySelector('[data-id="E8"]'),
+                    document.querySelector('[data-id="E9"]'),
+                    document.querySelector('[data-id="F8"]'),
+                    document.querySelector('[data-id="F9"]')
+                ];
+                
+                demoSeats.forEach(seat => {
+                    if (seat && !seat.classList.contains('occupied')) {
+                        const seatId = seat.dataset.id;
+                        const seatIndex = selectedSeats.findIndex(s => s.id === seatId);
+                        
+                        if (seatIndex === -1) {
+                            selectedSeats.push({
+                                id: seatId,
+                                row: seat.dataset.row,
+                                number: seat.dataset.number,
+                                type: seat.dataset.type,
+                                price: parseInt(seat.dataset.price)
+                            });
+                            seat.classList.add('selected');
+                        }
+                    }
+                });
+                
+                updateSelectedSeatsList();
+                updateOrderSummary();
+            }, 500);
+            
+            // Обработка методов оплаты
+            const paymentMethods = document.querySelectorAll('.method');
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    paymentMethods.forEach(m => m.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Обработка формы оплаты
+            document.getElementById('paymentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (selectedSeats.length === 0) {
+                    alert('Пожалуйста, выберите хотя бы одно место!');
+                    return;
+                }
+                
+                // Здесь обычно отправка данных на сервер
+                alert(`Оплата на сумму ${totalAmount}Р прошла успешно! Ваши билеты: ${selectedSeats.map(s => s.row + s.number).join(', ')}`);
+            });
+            
+            // Маски для ввода данных карты
+            document.getElementById('card-number').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+                let formatted = value.replace(/(\d{4})/g, '$1 ').trim();
+                e.target.value = formatted.substring(0, 19);
+            });
+            
+            document.getElementById('expiry-date').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+                if (value.length >= 2) {
+                    value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                }
+                e.target.value = value.substring(0, 5);
+            });
+            
+            document.getElementById('cvv').addEventListener('input', function(e) {
+                e.target.value = e.target.value.replace(/[^0-9]/gi, '').substring(0, 3);
+            });
+            
+            document.getElementById('cardholder').addEventListener('input', function(e) {
+                e.target.value = e.target.value.toUpperCase();
+            });
+        });
+    </script>
 </body>

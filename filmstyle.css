@@ -241,6 +241,12 @@
             background-position: center;
         }
 
+        .movie-zveropolis .movie-header{
+            background:  url('assets/zveropolis.png');
+            background-size: cover;
+            background-position: center; 
+        }
+
         .movie-aviator .movie-header {
             background: 
                         url('assets/aviator.png');
